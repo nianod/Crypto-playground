@@ -1,74 +1,84 @@
-# React + TypeScript + Vite
+#  Crypto Playground - Encryption & Decryption App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based application for **learning and experimenting with cryptography fundamentals**, specifically **AES encryption and decryption** using `crypto-js`.
 
-Currently, two official plugins are available:
+This project helps bridge the gap between **theory and practice** by visually demonstrating how encryption and decryption work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔒 AES Encryption
+- 🔓 AES Decryption
+- 🔑 Secret key–based encryption
+- 📋 Copy encrypted or decrypted text
+- 🧭 Tab-based UI (Encryption / Decryption)
+- ⚛️ Built with React + TypeScript
+- 🎨 Clean and responsive UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Learning Purpose
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project is ideal for:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Understanding **cryptography fundamentals**
+- Learning the difference between **encryption vs hashing**
+- Exploring **symmetric-key cryptography (AES)**
+- Seeing why **encrypted data can be decrypted** but **hashed data cannot**
+- Practicing **React state management**
+- Building real-world UI logic with tabs
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> ⚠️ **Disclaimer:**  
+> This project is for **educational purposes only**.  
+> Client-side encryption and hardcoded secret keys are **not secure for production systems**.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## How It Works
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# Decryption-T
+### Encryption Flow
+
+1. User enters plain text  
+2. The text is encrypted using **AES** with a **secret key**  
+3. The encrypted output is displayed to the user  
+
+### Decryption Flow
+
+1. User pastes the encrypted text  
+2. The **same secret key** used during encryption is applied  
+3. The original plain text is successfully recovered  
+
+> **Note:**  
+> Decryption only works if the **exact same secret key** used for encryption is provided.
+
+
+## Key Concepts
+
+### 🔐 Encryption vs Hashing
+
+- **Encryption**
+  - Reversible
+  - Uses a secret key
+  - Original message can be recovered
+  - Example: AES
+
+- **Hashing**
+  - One-way (irreversible)
+  - Used for password storage
+  - Cannot retrieve original value
+  - Example: SHA-256, bcrypt
+
+This app demonstrates **encryption**, not hashing.
+
+---
+
+## 🛠 Tech Stack
+
+- **React**
+- **TypeScript**
+- **CryptoJS**
+- **Lucide Icons**
+- **Tailwind CSS**
+
+ 
